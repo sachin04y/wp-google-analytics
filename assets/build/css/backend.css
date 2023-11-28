@@ -1,0 +1,92 @@
+#gnly-analytics-report-area .google-visualization-table-table td {
+  word-wrap: break-word;
+  max-width: 260px;
+  padding: 10px 0.35em;
+}
+#gnly-analytics-report-area .google-visualization-table-table th {
+  padding: 15px 10px;
+}
+#gnly-analytics-report-area .google-visualization-table-table tr td:first-child,
+#gnly-analytics-report-area .google-visualization-table-table tr td:nth-child(2) {
+  font-weight: bold;
+}
+#gnly-analytics-report-area .google-visualization-table-page-number {
+  padding: 2px;
+  min-width: 30px;
+  margin: 4px;
+}
+#gnly-analytics-report-area .google-visualization-table-div-page [role="button"] {
+  font-size: 15px;
+  line-height: 15px;
+}
+#gnly-analytics-report-area #gnly-report-cat-filter {
+  display: none;
+}
+#gnly-analytics-report-area #gnly-report-search-filter {
+  margin-right: 15px;
+}
+#gnly-analytics-report-area #gnly-report-search-filter,
+#gnly-analytics-report-area #gnly-cat-filter-spoof {
+  display: inline-block;
+  vertical-align: middle;
+}
+#gnly-analytics-report-area #gnly-cat-filter-spoof {
+  width: 125px;
+}
+#gnly-analytics-report-area .gnly-report-wrapper {
+  position: relative;
+}
+#gnly-analytics-report-area .gnly-loader[state="on"] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.66);
+  z-index: 10;
+  transition: 0.3s;
+  opacity: 1;
+}
+#gnly-analytics-report-area .gnly-loader[state="on"] .bar {
+  height: 4px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #ddd;
+}
+#gnly-analytics-report-area .gnly-loader[state="on"] .bar:before {
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 4px;
+  background-color: #2149f3;
+  animation: loading 2s linear infinite;
+}
+#gnly-analytics-report-area .gnly-loader[state="off"] {
+  opacity: 0;
+}
+@keyframes loading {
+  from {
+    left: -200px;
+    width: 30%;
+  }
+  50% {
+    width: 30%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    left: 50%;
+  }
+  95% {
+    left: 120%;
+  }
+  to {
+    left: 100%;
+  }
+}
